@@ -1,9 +1,8 @@
-set "source=<"folder path 1">"
-
-set "destination=<"folder path 2">"
+@echo off
+set source="D:\New\Old"
+set destination="D:\New\Copied"
 
 del /S %destination%
+xcopy /E "%source%" "%destination%"
 
-xcopy "%source%" "%destination%"
-
-start %destination%
+explorer %destination%
